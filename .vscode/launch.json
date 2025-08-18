@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "msedge",
+            "name": "http://192.168.174.234:3000/video10/index.html",
+            "request": "launch",
+            "url": "http://192.168.174.234:3000/video10/index.html"
+        }
+    ]
+}

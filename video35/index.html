@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move on CSS SELECTORS</title>
+    <style>
+        /*.box:first-child{
+            background-color: red;
+        }
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        p , a, .box ,[data-color="primary"]{
+            padding-top: 45px    ;
+        }
+
+        .box:nth-child(even){
+            background-color: blue;
+        }
+
+        .box:nth-last-child(2){
+            background-color: red;
+        }*/
+
+
+            .boxes::before{
+                content: "Jony is good";
+                color: violet;
+            }
+
+            .boxes::after{
+                content: "Gautam is good boy";
+                color: blue;
+            }
+
+            ::selection{
+                color: aqua;
+            }
+                .box::first-letter{
+                    color: peru;
+                    font-size: 45px;
+                }
+
+                input::placeholder{
+                    color: rgb(63, 63, 75);
+                }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary"class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+</html>

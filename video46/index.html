@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>CSSS Animations</title>
+
+    <style>
+        .container{
+
+            background-color: rgb(130, 162, 162);
+            width: 30vw;
+            height: 80vh;
+        }
+
+        .box{
+            width: 34px;
+            height: 45px;
+            background-color: aqua;
+            animation: jonykaAimation;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+        }
+        @keyframes jonykaAimation{
+            from{
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box     
+        </div>
+    </div>
+</body>
+</html> 

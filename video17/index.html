@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectos</title>
+    
+    <style>
+    /*div{
+        color: red;
+        background-color: blue;
+
+        }*/
+
+        /*class slecctor*/
+        .red{
+            background-color: red;
+        }
+        /*ID Selector*/
+        #green{
+            background-color: green;
+        }
+        /*child selector*/
+        div > p{
+            color: blue;
+            background-color: violet;
+        }
+        /*Descendant selecotr*/
+        div p{
+            color: blueviolet;
+            background-color: aquamarine;
+        }
+        /*universal selector*/
+        *{
+            margin:0;
+            padding:0;
+        }
+        /*pseudo selector*/
+        a:visited{
+            color: red;
+        }   
+        a.link{
+            color: green;
+        }
+
+        a:active{
+            background-color: red;
+        }
+
+        a:hover{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red">
+        I am a div
+        <p>today i have complete in 10 videos</p>
+    </div>
+    <div ID="green">
+        hey whats up
+    </div>
+    <a class="link" href="https://www.google.com">Go to Google</a><br>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+</body>
+</html>
+
+
+
