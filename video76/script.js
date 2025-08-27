@@ -1,44 +1,61 @@
-async function getData(){
-    return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            resolve(445)
-        }, timeout);
-    },3500);    
+// async function getData() {
+//     // Simulate getting data from a server
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(455)
+//         }, 3500);
+//     })
+// }
 
+// settle means resolve or reject
+// resolve means promise has settled successfully
+// reject means promise has not settled successfully
+
+async function getData() {
+    // Simulate getting data from a server
+    // let x = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+
+    let x = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: 'foo',
+                    body: 'bar',
+                    userId: 1,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+    let data = await x.json() 
+    return data
 }
-async function getData(){
-        let x = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-
-        let data = await x.json()
-        console.log(data)
-   
-}
-
 
 async function main(){
-    
-console.log("Loading modules")
+    console.log("Loading modules")
 
-console.log("do something else")
+    console.log("Do something else")
 
-console.log("Load data")    
+    console.log("Load data")
 
-let data = await getData()
+    let data = await getData()
 
-console.log("Data")
+    console.log(data)
 
-console.log("Process data")
+    console.log("process data")
 
-console.log("task 2")
+    console.log("task 2")
 
 }
 
 main()
 
+ 
 
+// data.then((v) => { 
+//     console.log(data)
 
+//     console.log("process data")
 
-postData("https://example.com/answer" , {answer : 42}).then((data) => {
-    console.log(data);
-
-})
+//     console.log("task 2")
+ 
+// })
